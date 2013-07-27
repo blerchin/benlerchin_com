@@ -21,7 +21,6 @@ LAYOUT & GRID STYLES
 div#container {
 	padding: 0 100px;
 }
-
 	
 /*********************
 NAVIGATION STYLES
@@ -143,4 +142,11 @@ do they need tweaking?
 		li {}
 	}
 } /* end .footer-links */
+
+footer ul.contact {
+	li {
+		width: 30%;
+		display: inline-block;
+	}
+}
 			

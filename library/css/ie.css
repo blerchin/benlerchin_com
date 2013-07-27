@@ -402,7 +402,7 @@ div#container {
 /*********************
 NAVIGATION STYLES
 *********************/
-/* line 29, ../scss/_481up.scss */
+/* line 28, ../scss/_481up.scss */
 nav header.h3 {
   width: 70px;
   position: absolute;
@@ -416,7 +416,7 @@ nav header.h3 {
   display: none;
 }
 
-/* line 42, ../scss/_481up.scss */
+/* line 41, ../scss/_481up.scss */
 .nav {
   position: fixed;
   top: 0;
@@ -439,34 +439,34 @@ nav header.h3 {
   /* Internet Explorer */
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
-/* line 52, ../scss/_481up.scss */
+/* line 51, ../scss/_481up.scss */
 .nav li {
   margin: 0;
 }
-/* line 54, ../scss/_481up.scss */
+/* line 53, ../scss/_481up.scss */
 .nav li a {
   width: 100%;
   margin: 0;
 }
 
 /* .menu is clearfixed inside mixins.scss */
-/* line 62, ../scss/_481up.scss */
+/* line 61, ../scss/_481up.scss */
 .menu {
   /* end .menu ul */
 }
-/* line 63, ../scss/_481up.scss */
+/* line 62, ../scss/_481up.scss */
 .menu ul {
   /* end .menu ul li */
   /* highlight current page */
   /* end current highlighters */
 }
-/* line 64, ../scss/_481up.scss */
+/* line 63, ../scss/_481up.scss */
 .menu ul li {
   /*
   plan your menus and drop-downs wisely.
   */
 }
-/* line 65, ../scss/_481up.scss */
+/* line 64, ../scss/_481up.scss */
 .menu ul li a {
   /*
   you can use hover styles here even though this size
@@ -479,23 +479,23 @@ nav header.h3 {
 POSTS & CONTENT STYLES
 *********************/
 /* entry content */
-/* line 110, ../scss/_481up.scss */
+/* line 109, ../scss/_481up.scss */
 .entry-content {
   /* at this larger size, we can start to align images */
 }
-/* line 114, ../scss/_481up.scss */
+/* line 113, ../scss/_481up.scss */
 .entry-content .alignleft, .entry-content img.alignleft {
   margin-right: 1.5em;
   display: inline;
   float: left;
 }
-/* line 119, ../scss/_481up.scss */
+/* line 118, ../scss/_481up.scss */
 .entry-content .alignright, .entry-content img.alignright {
   margin-left: 1.5em;
   display: inline;
   float: right;
 }
-/* line 124, ../scss/_481up.scss */
+/* line 123, ../scss/_481up.scss */
 .entry-content .aligncenter, .entry-content img.aligncenter {
   margin-right: auto;
   margin-left: auto;
@@ -512,6 +512,12 @@ check your menus here. do they look good?
 do they need tweaking?
 */
 /* end .footer-links */
+/* line 147, ../scss/_481up.scss */
+footer ul.contact li {
+  width: 30%;
+  display: inline-block;
+}
+
 /******************************************************************
 Site Name:
 Author:

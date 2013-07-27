@@ -84,6 +84,7 @@ div#container {
 	width: 100%;
 	max-width: $container-width;
 	margin: 0 auto;
+	padding: 30px;
 	postition: relative;
 
 }
@@ -881,8 +882,6 @@ FOOTER STYLES
 	footer ul.contact {
 		margin-top: 30px;
 		li {
-			 width: 30%;
-			 display: inline-block;
 			 font-family: $uni-med;
 		 }
 	}

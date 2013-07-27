@@ -49,8 +49,9 @@
 			margin-right: 10px;
 
 
+
 			h3 {
-				height: 70px;
+				min-height: 70px;
 				border: 0px dashed #333;
 				border-width: 1px 1px 0px 0px;
 				margin-bottom: 0px;
@@ -62,6 +63,16 @@
 					height: 100%;
 					width: 100%;
 					padding: .5em .5em .5em .5em;
+				}
+
+			}
+
+			@media screen and (max-width:481px) {
+				width: 100px;
+				margin-right: 5px;
+				
+				h3{
+					min-height: 100px;
 				}
 
 			}

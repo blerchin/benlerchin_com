@@ -21,22 +21,13 @@ jQuery('.portfolio .portfolio-piece .portfolio-closed').click(function(e) {
 			$piece.addClass('portfolio-open');
 			$piece.children('.portfolio-closed').hide(400, 'swing', function() {
 								$portfolio.packery('fit', $piece.get()[0], 0, 0);
-									/*								
- 								$portfolio.packery( 'on', 'layoutComplete', function(){
-									jQuery(window).scrollTo($piece.offset().top - 40,
-											{
-											axis: 'y',
-											easing: 'swing',
-											duration: 600
-											});
-									return true;
-								});
-								*/
 			});
 		//otherwise retrieve content and create closed/open divs
 		} else {
+			$piece.append("<img class='preloader' src='wp-content/themes/blerchin/library/images/preloader.gif' />");
 			var src = $piece.find('h3 a').attr('href');
 			function replace(html) {
+				$piece.find('img.preloader').remove();
 				var details = jQuery.parseHTML(html);	
 				var $p_open = jQuery("<div class='portfolio-open'>").appendTo($piece);
 				$p_open.append("<a href='#' class='portfolio-button-close'>close</a>");
@@ -46,20 +37,9 @@ jQuery('.portfolio .portfolio-piece .portfolio-closed').click(function(e) {
 
 				var min_height = ($piece.parent().children().get().length - 1) * $piece.find('.portfolio-closed').height();
 				$p_open.css('min-height', min_height);
-
+				
 				$piece.children('.portfolio-closed').hide(400, 'swing', function() {
 									$portfolio.packery('fit', $piece.get()[0], 0, 0);
-									/*
-									$portfolio.packery( 'on', 'layoutComplete', function(){
-										jQuery(window).scrollTo($piece.offset().top - 40,
-												{
-												axis: 'y',
-												easing: 'swing',
-												duration: 600
-												});
-										return true;
-									});
-									*/
 				});
 				// bind close function to just-created close button
 				jQuery('.portfolio .portfolio-piece .portfolio-open a.portfolio-button-close').click(function(e) {

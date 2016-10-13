@@ -11,8 +11,6 @@
 
 					<ul class="contact">
 						<li>ben@lerchin.com</li>
-						<li>+1 971-225-3724</li>
-						<li>Walla Walla, WA 99362</li>
 					</ul>
 
 				</div> <!-- end #inner-footer -->

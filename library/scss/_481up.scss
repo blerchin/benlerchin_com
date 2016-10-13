@@ -38,24 +38,6 @@ nav header.h3 {
 	display: none;
 
 }
-.nav {
-	position: fixed;
-	top: 0;
-	right: 0%;
-	padding: 0;
-	margin: 0;
-
-	@include ccw-rotate;
-
-
-	li {
-		margin: 0;
-		a {
-			width: 100%;
-			margin: 0;
-		}
-	}
-}
 
 	/* .menu is clearfixed inside mixins.scss */
 	.menu {
@@ -145,7 +127,6 @@ do they need tweaking?
 
 footer ul.contact {
 	li {
-		width: 30%;
 		display: inline-block;
 	}
 }

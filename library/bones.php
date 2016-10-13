@@ -136,7 +136,6 @@ function bones_scripts_and_styles() {
     wp_register_script( 'blerchin-portfolio-ajax', get_stylesheet_directory_uri() . '/library/js/portfolio.js', array('blerchin-packery','blerchin-scrollto', 'jquery'), '1.0.0', true );
 
 		// web fonts
-
 		function add_webfonts() { ?>
 			<script type="text/javascript" src="http://fast.fonts.com/jsapi/05cefa3d-5de3-4314-a4d0-0d86030332b1.js"></script>
 		<?php };

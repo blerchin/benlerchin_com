@@ -201,6 +201,7 @@ and more scalable.
   @include display-flex;
   @include flex-wrap(wrap);
 	font-size: 0; //get rid of space between li's
+  max-width: 310px;
 
 
 	li {

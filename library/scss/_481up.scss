@@ -39,6 +39,10 @@ nav header.h3 {
 
 }
 
+.nav {
+  max-width: 290px;
+}
+
 	/* .menu is clearfixed inside mixins.scss */
 	.menu {
 		ul {

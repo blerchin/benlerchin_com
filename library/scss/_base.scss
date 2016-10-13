@@ -1,3 +1,4 @@
+@import "compass/css3";
 /******************************************************************
 Site Name:
 Author:
@@ -197,10 +198,13 @@ and more scalable.
 */
 
 .nav {
+  @include display-flex;
+  @include flex-wrap(wrap);
 	font-size: 0; //get rid of space between li's
 
 
 	li {
+      @include flex(1);
 			display: inline-block;
 			border: 0px dashed #ccc;
 			border-width: 1px 0px 0px 1px;

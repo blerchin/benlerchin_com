@@ -206,8 +206,7 @@ and more scalable.
 	li {
       @include flex(1);
 			display: inline-block;
-			border: 0px dashed #ccc;
-			border-width: 1px 1px 0px 1px;
+			border: 1px dashed #ccc;
 			margin: -1px 0 0 -1px;
 			padding: 0px;
 			background-color: white;

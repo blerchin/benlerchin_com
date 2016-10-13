@@ -1,3 +1,4 @@
+@import "compass/css3";
 /******************************************************************
 Site Name:
 Author:
@@ -40,9 +41,12 @@ NAVIGATION STYLES
 *********************/
 
 .nav {
+  @include display-flex;
+  max-width: 590px;
 
 
 	li {
+    @include flex(1);
 
 		a {
 			border-bottom: 0;

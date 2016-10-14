@@ -55,7 +55,6 @@
 
 
 					<nav role="navigation">
-						<header class="h3">More Info:</header>
 						<?php bones_main_nav(); ?>
 					</nav>
 

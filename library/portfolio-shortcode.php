@@ -2,6 +2,7 @@
 /* Creates a shortcode to allow Porfolio Pieces in a specified category to be shown as a slideshow */
 
 function portfolio_tag( $atts ) {
+	global $post;
 	$result = "";
 	$type = "portfolio-piece";
 	$cat = $atts['cat'];
@@ -16,7 +17,7 @@ function portfolio_tag( $atts ) {
 			$result .= "<div class='portfolio-closed'>";
 			$result .= "<h3><a href=\"" . get_permalink() . "\">" . get_the_title() . "</a></h3>";
 			$result .= "<a href='" . get_permalink() . "'>" . 
-				get_the_post_thumbnail( $current_post, array(150,150)) . "</a>";
+				get_the_post_thumbnail( $post->ID, array(150,150)) . "</a>";
 			$result .= "</div>";
 			$result .= "</div>";
 		}

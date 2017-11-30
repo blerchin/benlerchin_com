@@ -3,8 +3,11 @@ function portfolio_ajax() {
 	var $grid = $portfolio.packery({
 			itemSelector: '.portfolio-piece'
 	});
+	$grid.imagesLoaded().progress(function() {
+		$grid.packery();
+	});
 
-jQuery('.portfolio .portfolio-piece .portfolio-closed').click(function(e) {
+	jQuery('.portfolio .portfolio-piece .portfolio-closed').click(function(e) {
 		e.preventDefault();
 		var $piece = jQuery(this).parent();
 

@@ -128,8 +128,10 @@ function bones_scripts_and_styles() {
 
     // modernizr (without media query polyfill)
     wp_register_script( 'bones-modernizr', get_stylesheet_directory_uri() . '/library/js/libs/modernizr.custom.min.js', array(), '2.5.3', false );
+		// imagesloaded
+    wp_register_script( 'blerchin-imagesloaded', get_stylesheet_directory_uri() . '/library/js/libs/imagesloaded.pkgd.min.js', array(), '1.0.0', true );
 		// packery
-    wp_register_script( 'blerchin-packery', get_stylesheet_directory_uri() . '/library/js/libs/packery.pkgd.min.js', array(), '1.0.0', true );
+    wp_register_script( 'blerchin-packery', get_stylesheet_directory_uri() . '/library/js/libs/packery.pkgd.min.js', array('blerchin-imagesloaded'), '1.0.0', true );
 		// scrollTo
 		wp_register_script( 'blerchin-scrollto', get_stylesheet_directory_uri() . '/library/js/libs/jquery.scrollTo-1.4.3.1-min.js', array('jquery'), '1.4.3.1', true);
     // portfolio ajax

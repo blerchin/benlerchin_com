@@ -3,7 +3,7 @@ function portfolio_ajax() {
 	var $grid = $portfolio.packery({
 			itemSelector: '.portfolio-piece'
 	});
-	$grid.imagesLoaded().progress(function() {
+	$grid.imagesLoaded(function() {
 		$grid.packery();
 	});
 

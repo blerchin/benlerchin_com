@@ -1,7 +1,8 @@
 function portfolio_ajax() {
 	var $portfolio = jQuery('.portfolio');
 	var $grid = $portfolio.packery({
-			itemSelector: '.portfolio-piece'
+			itemSelector: '.portfolio-piece',
+			initLayout: false
 	});
 	$grid.imagesLoaded(function() {
 		$grid.packery();

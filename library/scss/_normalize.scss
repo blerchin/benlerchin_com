@@ -100,7 +100,7 @@ body {
  */
 
 a:focus {
-    outline: thin dotted;
+    outline: none;
 }
 
 /*
@@ -506,12 +506,12 @@ to remove them if you like or add your own. If you want to update
 the normalize styles, make sure to edit from this point up.
 ******************************************************************/
 
-// proper formatting (http://blog.fontdeck.com/post/9037028497/hyphens) 
+// proper formatting (http://blog.fontdeck.com/post/9037028497/hyphens)
 p {
-	-webkit-hyphens: auto;
-	-epub-hyphens:   auto;
-	-moz-hyphens:    auto;
-  hyphens:         auto;
+	-webkit-hyphens: none;
+	-epub-hyphens:   none;
+	-moz-hyphens:    none;
+  hyphens:         none;
 }
 
 b, strong, .strong { font-weight: bold; }

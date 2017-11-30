@@ -1,3 +1,4 @@
+@import "compass/css3";
 /******************************************************************
 Site Name:
 Author:
@@ -12,37 +13,7 @@ come into play. Have fun!
 
 ******************************************************************/
 
-
-/*********************
-GENERAL STYLES
-*********************/
-
-body {}
-
-/*********************
-LAYOUT & GRID STYLES
-*********************/
-
-.wrap {
-	max-width: 1140px;
-}
-
-/*********************
-HEADER STYLES
-*********************/
-
-.header {}
-
-	#logo {}
-
-/*********************
-NAVIGATION STYLES
-*********************/
-
 .nav {
-  max-width: 590px;
-
-
 	li {
 
 		a {
@@ -52,10 +23,6 @@ NAVIGATION STYLES
 			you can use hover styles here even though this size
 			has the possibility of being a mobile device.
 			*/
-			&:hover, &:focus {
-				background-color: #dedede;
-
-			}
 		}
 
 		&:first-child {}
@@ -67,7 +34,6 @@ NAVIGATION STYLES
 		ul.sub-menu,
 		ul.children {
 			margin-top: 0;
-			border: 1px solid #ccc;
 			border-top: 0;
 			position: absolute;
 			display: none;
@@ -256,25 +222,19 @@ SIDEBARS & ASIDES
 /*********************
 FOOTER STYLES
 *********************/
-
-/*
-you'll probably need to do quite a bit
-of overriding here if you styled them for
-mobile. Make sure to double check these!
-*/
-.footer-links {
-	ul {
-		li {
-			a {
-				&:hover {}
-			}
-			/*
-			be careful with the depth of your menus.
-			it's very rare to have multi-depth menus in
-			the footer.
-			*/
-			ul {}
-		}
+p#logo,
+p#tagline {
+	margin-left: 40%;
+}
+nav {
+	.title {
+		display: block;
+		float: left;
+		font-weight: 500;
 	}
-} /* end .footer-links */
-
+	.nav {
+		left: 40%;
+		position: absolute;
+		right: 0;
+	}
+}

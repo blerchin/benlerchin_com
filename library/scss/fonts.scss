@@ -1,0 +1,96 @@
+@mixin fontdef($Path, $FileName, $Version) {
+  src: url('#{$Path}/#{$FileName}.eot?v=#{$Version}');
+  src:
+    url('#{$Path}/#{$FileName}.eot?#iefix&v=#{$Version}') format('embedded-opentype'),
+    url('#{$Path}/#{$FileName}.woff2?v=#{$Version}') format('woff2'),
+    url('#{$Path}/#{$FileName}.woff?v=#{$Version}') format('woff');
+}
+$karbon: 'Karbon';
+$karbon-slab: 'Karbon Slab Stencil';
+$font--karbon-slab: #{$karbon-slab}, 'Helvetica Neue', sans-serif;
+$font--karbon: #{$karbon}, 'Helvetica Neue', sans-serif;
+
+@font-face {
+  @include fontdef('../fonts', 'KarbonWeb-Hairline', '1.0.0');
+  font-family: $karbon;
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  @include fontdef('../fonts', 'KarbonWeb-HairlineItalic', '1.0.0');
+  font-family: $karbon;
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  @include fontdef('../fonts', 'KarbonWeb-Thin', '1.0.0');
+  font-family: $karbon;
+  font-weight: 200;
+  font-style: regular;
+}
+@font-face {
+  @include fontdef('../fonts', 'KarbonWeb-ThinItalic', '1.0.0');
+  font-family: $karbon;
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  @include fontdef('../fonts', 'KarbonWeb-Light', '1.0.0');
+  font-family: $karbon;
+  font-weight: 300;
+  font-style: regular;
+}
+@font-face {
+  @include fontdef('../fonts', 'KarbonWeb-LightItalic', '1.0.0');
+  font-family: $karbon;
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  @include fontdef('../fonts', 'KarbonWeb-Regular', '1.0.0');
+  font-family: $karbon;
+  font-weight: 400;
+  font-style: regular;
+}
+@font-face {
+  @include fontdef('../fonts', 'KarbonWeb-RegularItalic', '1.0.0');
+  font-family: $karbon;
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  @include fontdef('../fonts', 'KarbonWeb-Medium', '1.0.0');
+  font-family: $karbon;
+  font-weight: 500;
+  font-style: regular;
+}
+@font-face {
+  @include fontdef('../fonts', 'KarbonWeb-MediumItalic', '1.0.0');
+  font-family: $karbon;
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  @include fontdef('../fonts', 'KarbonWeb-SemiBold', '1.0.0');
+  font-family: $karbon;
+  font-weight: 600;
+  font-style: regular;
+}
+@font-face {
+  @include fontdef('../fonts', 'KarbonWeb-SemiBoldItalic', '1.0.0');
+  font-family: $karbon;
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  @include fontdef('../fonts', 'KarbonWeb-Bold', '1.0.0');
+  font-family: $karbon;
+  font-weight: 700;
+  font-style: regular;
+}
+@font-face {
+  @include fontdef('../fonts', 'KarbonWeb-BoldItalic', '1.0.0');
+  font-family: $karbon;
+  font-weight: 700;
+  font-style: italic;
+}

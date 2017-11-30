@@ -6,10 +6,6 @@
 							<?php bones_footer_links(); ?>
 									</nav>
 
-					<ul class="contact">
-						<li>ben@lerchin.com</li>
-					</ul>
-
 				</div> <!-- end #inner-footer -->
 
 			</footer> <!-- end footer -->

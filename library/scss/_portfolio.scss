@@ -1,119 +1,99 @@
 .portfolio {
-	position: relative;	
-	width: 100%;
+	position: relative;
 	display: block;
 	overflow: hidden;
-
+	margin: 30px -10px;
 }
 .portfolio-piece {
-			a.project-link {
-				position: relative;
-				font-family: $museo-300;
-				color: #333;
-				padding: 5px 7px;
-				margin-bottom: 10px;
-				border: 1px #333 dashed;
-				border-width: 0px 0px 0px 1px;
-				width: 100%;
-				display: block;
+	position: relative;
+	width: 100%;
+	a.project-link {
+		position: relative;
+		font-family: $font--karbon;
+		font-weight: 400;
+		color: #333;
+		padding: 5px 0;
+		margin-bottom: 10px;
+		width: 100%;
+		display: block;
 
-				&.project-link:hover {
-					color: #000;
-				}
-			}
+		&.project-link:hover {
+			color: #000;
+		}
+	}
 
-			img.preloader {
-				position: relative;
-				top: -100px;
-				left: 40px;
-				z-index: 199;
-			}
+	img.preloader {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-left: -40px;
+		z-index: 199;
+	}
 }
 .portfolio > .portfolio-piece {
 	float: left;
-	height: 150px + 70px;
-
 	&.portfolio-open {
-		width: 150px * 3;
 		max-width: 100%;
 		height: auto;
-
+		padding: 10px;
+		width: 900px;
+		p {
+			font-size: 18px;
+		}
 	}
 }
 
-	.portfolio-closed {
-			width: 140px;
-			height: 150px + 70px;
-			overflow: hidden;
-			vertical-align: bottom;
-			margin-right: 10px;
+.portfolio-closed {
+	overflow: hidden;
+	padding: 10px;
+	vertical-align: bottom;
 
-
-
-			h3 {
-				min-height: 70px;
-				border: 0px dashed #333;
-				border-width: 1px 1px 0px 0px;
-				margin-bottom: 0px;
-				margin-top: 10px;
-				overflow: auto;
-
-				a {
-					display: block;
-					height: 100%;
-					width: 100%;
-					padding: .5em .5em .5em .5em;
-				}
-
-			}
-
-			@media screen and (max-width:481px) {
-				width: 100px;
-				margin-right: 5px;
-				
-				h3{
-          font-size: 1em;
-					min-height: 100px;
-				}
-
-			}
-	}
-
-	.portfolio-piece .portfolio-open {
+	h3 {
+		min-height: 70px;
+		margin-bottom: 0px;
+		margin-top: 10px;
+		overflow: auto;
+		a {
 			display: block;
-			position: relative;
-			height: auto;
+			height: 100%;
 			width: 100%;
-			padding-right: 10px;
-			margin: 10px 10px 0 0;
-			border: 0px dashed #333;
-			border-width: 1px 1px 0px 0px;
-			h2 {
-				min-height: 70px;
-				margin: 0px 0 0 0;
-				padding: 15px 25px 0 0;
-			}
-			article {
-				width: 100%;
-			}
-			section.entry-content {
-				width: 100%;
-				height: auto;
-			}
-			p:first-child {
-				padding-top: 0px;
-				margin-top: 0px;
-			}
-			a.portfolio-button-close {
-				position: absolute;
-				font-size:0;
-				background-image: url('../images/close.svg');
-				background-width: 10px;
-				width: 20px;
-				height: 20px;
-				right: 15px;
-				top: 15px;
-			}
+		}
+	}
+	img {
+		margin-bottom: 0 !important;
+	}
+}
 
-
+.portfolio-piece .portfolio-open {
+	display: block;
+	position: relative;
+	height: auto;
+	h2 {
+		min-height: 70px;
+		margin: 0px 0 0 0;
+		padding: 0 25px 0 0;
+		position: relative;
+	}
+	article {
+		width: 100%;
+	}
+	section.entry-content {
+		width: 100%;
+		height: auto;
+	}
+	p:first-child {
+		padding-top: 0px;
+		margin-top: 0px;
+	}
+	a.portfolio-button-close {
+		position: absolute;
+		font-size:0;
+		background-image: url('../images/close.svg');
+		background-width: 10px;
+		width: 20px;
+		height: 20px;
+		right: 0px;
+		top: 0;
+		z-index: 199;
+	}
 }

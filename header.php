@@ -44,19 +44,22 @@
 		<div id="container">
 
 			<header class="header" role="banner">
+				<div class="nav-wrap">
+					<nav role="navigation">
+						<h3 class="title">Ben Lerchin</h3>
+						<?php bones_main_nav(); ?>
+					</nav>
+				</div>
 
 				<div id="inner-header" class="wrap clearfix">
 
+
 					<!-- to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> -->
 					<p id="logo" class="h1"><a href="<?php echo home_url(); ?>" rel="nofollow">Hello, <br />I'm Ben Lerchin</a></p>
-					<p id="tagline" class="headline"><?php bloginfo('description'); 
+					<p id="tagline" class="headline"><?php bloginfo('description');
 					?></p>
 
 
-
-					<nav role="navigation">
-						<?php bones_main_nav(); ?>
-					</nav>
 
 				</div> <!-- end #inner-header -->
 

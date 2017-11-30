@@ -1,6 +1,6 @@
 function portfolio_ajax() {
 	var $portfolio = jQuery('.portfolio');
-	$portfolio.packery({
+	var $grid = $portfolio.packery({
 			itemSelector: '.portfolio-piece'
 	});
 
@@ -28,16 +28,16 @@ jQuery('.portfolio .portfolio-piece .portfolio-closed').click(function(e) {
 			var src = $piece.find('h3 a').attr('href');
 			function replace(html) {
 				$piece.find('img.preloader').remove();
-				var details = jQuery.parseHTML(html);	
+				var details = jQuery.parseHTML(html);
 				var $p_open = jQuery("<div class='portfolio-open'>").appendTo($piece);
 				$p_open.append("<a href='#' class='portfolio-button-close'>close</a>");
 				$p_open.append( jQuery(details).find('article.portfolio-piece'));
 				$p_open.find('h2').wrapInner("<a href='"+src+"'>");
 				$piece.addClass('portfolio-open');
-
-				var min_height = ($piece.parent().children().get().length - 1) * $piece.find('.portfolio-closed').height();
-				$p_open.css('min-height', min_height);
-				
+				if (window.innerWidth > 768) {
+					var min_height = ($piece.parent().children().get().length - 1) * $piece.find('.portfolio-closed').height();
+					$p_open.css('min-height', min_height);
+				}
 				$piece.children('.portfolio-closed').hide(400, 'swing', function() {
 									$portfolio.packery('fit', $piece.get()[0], 0, 0);
 				});

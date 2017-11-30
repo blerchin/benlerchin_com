@@ -17,24 +17,20 @@ GENERAL STYLES
 *********************/
 
 body {
-	font-family: $uni-thin, $sans-serif;
+	font-family: $font--karbon;
 	font-size: 100%;
 	line-height: 1.4;
-	color: $blerchin-grey;
+	color: 1e1e1e;
 	position: relative;
 
 }
 
 p {
 	font-size: 16px;
-	
+
 	&.headline {
 		font-size: 22px;
 	}
-}
-
-strong {
-	font-family: $uni-med;
 }
 
 /********************
@@ -43,7 +39,10 @@ style a page via class
 ********************/
 
 .rtl {}                           /* for sites that are read right to left (i.e. hebrew) */
-.home {}                          /* home page */
+.home {
+	padding-left: 20px;
+	padding-right: 20px;
+}                          /* home page */
 .blog {}                          /* blog template page */
 .archive {}                       /* archive page */
 .date {}                          /* date archive page */
@@ -82,15 +81,11 @@ style a page via class
 LAYOUT & GRID STYLES
 *********************/
 div#container {
-	width: 100%;
-	max-width: $container-width;
-	margin: 0 auto;
-	padding: 30px;
-	postition: relative;
-
+	max-width: 1200px;
+	margin: 50px auto;
 }
 .wrap {
-	width: 96%;
+	width: 100%;
 	margin: 0 auto;
 }
 
@@ -118,7 +113,6 @@ a, a:visited {
 		so it basically works like the :hover selector
 		for mobile devices.
 		*/
-		-webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
 	}
 }
 
@@ -127,52 +121,55 @@ H1, H2, H3, H4, H5 STYLES
 ******************************************************************/
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
-	font-family: $sans-serif;
-	text-rendering: optimizelegibility;
-	font-weight: 100;
 	margin-bottom: 0em;
-	/*
-	if youre going to use webfonts, be sure to check your weights
-	http://css-tricks.com/watch-your-font-weight/
-	*/
-
-	/* removing text decoration from all headline links */
 	a {
 		text-decoration: none;
 	}
 }
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6,
+p, a {
+	font-family: $font--karbon;
+	text-rendering: optimizelegibility;
+}
 
 h1, .h1 {
-	font-family: $museo-700;
 	font-size: 3.5em;
+	font-weight: 400;
 	line-height: 1.2em;
 	margin-top: 1.3em;
 }
 
 h2, .h2 {
-	font-family: $museo-700;
 	font-size: 1.8em;
+	font-weight: 500;
 	line-height: 1.4em;
 	margin-bottom: 0.375em;
 }
 
 h3, .h3 {
-	font-family: $museo-300;
 	font-size: 1.125em;
+	font-weight: 500;
 }
 
 h4, .h4 {
-	font-family: $museo-300;
 	font-size: 1.1em;
 	font-weight: 700;
 }
 
 h5, .h5 {
-	font-family: $museo-300;
 	font-size: 0.846em;
 	line-height: 2.09em;
 	text-transform: uppercase;
 	letter-spacing: 2px;
+}
+
+p {
+	font-weight: 300;
 }
 
 /*********************
@@ -180,6 +177,7 @@ HEADER STYLES
 *********************/
 
 .header {
+	position: relative;
 	margin-top: .5em;
 }
 
@@ -197,28 +195,40 @@ the navs on the site so our css is cleaner
 and more scalable.
 */
 
-.nav {
-  @include display-flex;
-  @include flex-wrap(wrap);
-	font-size: 0; //get rid of space between li's
-  max-width: 310px;
+.nav-wrap {
+	background-color: #ffffff;
+	position: fixed;
+	left: 0;
+	overflow: hidden;
+	padding: 10px 20px;
+	top: 0;
+	width: 100%;
+	z-index: 10;
+}
 
-
+nav {
+	margin: 0 auto;
+  max-width: 1200px;
+	padding: 0;
+	position: relative;
+	width: 100%;
+	ul {
+		@include display-flex;
+		@include justify-content(space-between);
+		margin: 0px -10px;
+	}
 	li {
-      @include flex(1 1 auto);
-			display: inline-block;
-			border: 1px dashed #ccc;
-			margin: -1px 0 0 -1px;
-			padding: 0px;
-			background-color: white;
-			font-size: 16px;
-
-
+		@include flex-grow(1);
+		display: inline-block;
+		background-color: white;
+		font-size: 16px;
+		font-weight: 500;
+		padding: 0 10px;
+		width: auto;
 		a {
 			display: block;
 			text-decoration: none;
-			padding: 10px 20px 10px 20px;
-			//background-color: #efefef;
+			padding: 10px 0;
 
 			/*
 			remember this is for mobile ONLY, so there's no need
@@ -227,6 +237,7 @@ and more scalable.
 			keep this file as small as possible!
 			*/
 			&:hover, &:focus {
+				text-decoration: underline;
 
 			}
 
@@ -326,6 +337,10 @@ POSTS & CONTENT STYLES
 		.entry-content {
 
 			p {
+				font-size: 26px;
+				font-weight: 300;
+				max-width: 900px;
+				margin: 2em auto;
 			}
 
 
@@ -443,7 +458,11 @@ POSTS & CONTENT STYLES
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
-
+nav {
+	.title {
+		display: none;
+	}
+}
 .page-navigation,
 .wp-prev-next {
 	margin: 1.1em 0 2.2em;
@@ -888,4 +907,3 @@ FOOTER STYLES
 
 
 	.copyright {}
-

@@ -46,7 +46,7 @@
 			<header class="header" role="banner">
 				<div class="nav-wrap">
 					<nav role="navigation">
-						<h3 class="title">Ben Lerchin</h3>
+						<h3 class="title"><a href="/">Ben Lerchin</a></h3>
 						<?php bones_main_nav(); ?>
 					</nav>
 				</div>

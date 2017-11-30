@@ -16,7 +16,7 @@ function portfolio_tag( $atts ) {
 			$result .= "<div class='$type $cat'>";
 			$result .= "<div class='portfolio-closed'>";
 			$result .= "<a href='" . get_permalink() . "'>" .
-				get_the_post_thumbnail( $post->ID, array(600,400)) . "</a>";
+				get_the_post_thumbnail( $post->ID, array(500,333)) . "</a>";
 			$result .= "<h3><a href=\"" . get_permalink() . "\">" . get_the_title() . "</a></h3>";
 			$result .= "</div>";
 			$result .= "</div>";

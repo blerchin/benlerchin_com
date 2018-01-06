@@ -10,21 +10,22 @@
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-								<header class="article-header">
-
-										<h2 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h2>
-								<?php 
-									$p_link = get_post_meta(get_the_ID(),'project-link', true);
-									if (!empty($p_link)): ?>
-										<a class="project-link" href="<?php echo $p_link; ?>" 
-										target="_empty">
-											Project Link </a>
-								<?php endif; ?>
-							
-								</header> <!-- end article header -->
-
 								<section class="entry-content clearfix" itemprop="articleBody">
-									<?php the_content(); ?>
+									<div class="lead-image">
+										<?php the_post_thumbnail('large'); ?>
+										<?php
+											$p_link = get_post_meta(get_the_ID(),'project-link', true);
+											if (!empty($p_link)):
+										?>
+												<a class="project-link" href="<?php echo $p_link; ?>"
+												target="_empty">
+													Project Link </a>
+										<?php endif; ?>
+									</div>
+									<div class="article-body">
+										<h2 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h2>
+										<?php the_content(); ?>
+									</div>
 								</section> <!-- end article section -->
 
 								<footer class="article-footer">

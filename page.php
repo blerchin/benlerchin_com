@@ -16,7 +16,7 @@
 
 -->
 
-<?php 
+<?php
 //<p class="byline vcard">
 ?>
 <?php
@@ -29,7 +29,7 @@
 
 								<section class="entry-content clearfix" itemprop="articleBody">
 									<?php the_content(); ?>
-							</section> <!-- end article section -->
+								</section> <!-- end article section -->
 
 								<footer class="article-footer">
 									<?php the_tags('<span class="tags">' . __('Tags:', 'bonestheme') . '</span> ', ', ', ''); ?>

@@ -21,12 +21,17 @@
 			color: #000;
 		}
 	}
-
-	img.preloader {
+	&.loading:before {
+		content: '';
+		background-image: url(../images/preloader.svg);
+		background-position: center;
+		background-size: contain;
 		position: absolute;
-		top: 50%;
+		top: 100px;
 		left: 50%;
-		margin-left: -40px;
+		margin-left: -20px;
+		height: 40px;
+		width: 40px;
 		z-index: 199;
 	}
 }

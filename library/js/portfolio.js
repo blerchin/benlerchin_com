@@ -28,10 +28,10 @@ function portfolio_ajax() {
 			});
 		//otherwise retrieve content and create closed/open divs
 		} else {
-			$piece.append("<img class='preloader' src='wp-content/themes/blerchin/library/images/preloader.gif' />");
+			$piece.addClass('loading');
 			var src = $piece.find('h3 a').attr('href');
 			function replace(html) {
-				$piece.find('img.preloader').remove();
+				$piece.removeClass('loading');
 				var details = jQuery.parseHTML(html);
 				var $p_open = jQuery("<div class='portfolio-open'>").appendTo($piece);
 				$p_open.append("<a href='#' class='portfolio-button-close'>close</a>");
